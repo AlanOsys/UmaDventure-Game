@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<title>Boio Game</title>
+<meta name="viewport" content="height=device-height, initial-scale=1.0, user-scalable=no,maximum-scale=1"/>
+<meta name="MobileOptimized" content="320"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+<style type="text/css">
+    body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    user-select: none;
+    background-color: rgb(63, 63, 63);
+    
+}
+#container{
+    width: 600px;
+    height: 100%;
+    background-color: rgb(0, 122, 27);
+    position: absolute;
+}
+#Game_begin{
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(235, 204, 31);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+#gamedisplay{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    background-color: aliceblue;
+}
+
+</style>
+</head>
+<div id="container">
+    <button id="Game_begin" onclick="Begin_Game()">Go</button>
+</div>
+<body>
+
+<script>
+function Begin_Game(){
+    container = document.getElementById("container")
+    gamedisplay = document.createElement("div")
+    gamedisplay.id = 'gamedisplay'
+    container.appendChild(gamedisplay)
+    randomSeed = []
+    for(let i = 0;i<10;i++){
+        randomSeed.push(Math.floor(Math.random()*2))
+    }
+    
+    distances = [400,800,1200]
+    distance = distances[Math.floor(Math.random()*distances.length)]
+    gamedisplay.innerHTML = distance
+    placeholderRacer = [3,3,3,3]
+}
+
+</script>
+
+</body>
