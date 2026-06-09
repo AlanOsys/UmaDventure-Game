@@ -19,8 +19,10 @@
 #container{
     width: 600px;
     height: 100%;
+    left: 600px;
     background-color: rgb(0, 122, 27);
     position: absolute;
+    z-index: 100;
 }
 #Game_begin{
     top: 70%;
@@ -44,30 +46,587 @@
     top: 10%;
     background-color: aliceblue;
 }
+#TrainContainer{
+    width: 600px;
+    height: 100%;
+    background-color: rgb(102, 70, 34);
+    position: absolute;
+    left: 600px;
+    position: absolute;
+}
+#StatContainer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+    max-height: 70px;
+    flex-wrap: nowrap;
+    display: flex;
+    z-index: 2;
 
+
+}
+.statNode{
+    float: left;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: aliceblue;
+    margin-right: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    
+}
+#StatNameContainer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+    max-height: 70px;
+    flex-wrap: nowrap;
+    display: flex;
+    z-index: 0;
+
+
+}
+.statNameNode{
+    float: left;
+    width: 70px;
+    height: 70px;
+    border-radius: 25px;
+    background-color: rgb(63, 120, 170);
+    margin-right: 10px;
+    font-size: 30px;
+    text-align:center;
+    z-index: 0;
+    position: relative;
+}
+#EnergyBar{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+    flex-wrap: nowrap;
+    display: flex;
+    width: 60%;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(49, 66, 80);
+    margin-right: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#EnergyFill{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0%;
+    flex-wrap: nowrap;
+    display: flex;
+    
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(69, 133, 63);
+    margin-right: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#EnergyFillMissing{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0%;
+    flex-wrap: nowrap;
+    display: flex;
+    
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(118, 221, 216);
+    margin-right: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+#Dungeon{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 72%;
+    height: 90px;
+    width: 230px;
+    flex-wrap: nowrap;
+    display: flex;
+    border-radius: 25px;
+    background-color: rgb(63, 120, 170);
+    margin-right: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Rest{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 83%;
+    height: 90px;
+    width: 140px;
+    flex-wrap: nowrap;
+    display: flex;
+    border-radius: 25px;
+    background-color: rgb(63, 170, 134);
+    margin-right: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Items{
+    position: absolute;
+    left: 10%;
+    top: 83%;
+    height: 90px;
+    width: 140px;
+    flex-wrap: nowrap;
+    display: flex;
+    border-radius: 25px;
+    background-color: rgb(181, 206, 69);
+    margin-right: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Shop{
+    position: absolute;
+    left: 67%;
+    top: 83%;
+    height: 90px;
+    width: 140px;
+    flex-wrap: nowrap;
+    display: flex;
+    border-radius: 25px;
+    background-color: rgb(113, 63, 170);
+    margin-right: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Turn{
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(238, 255, 81);
+    border-radius: 10px;
+
+}
+#Flicker{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    background-color: aliceblue;
+}
+#Skills{
+    position: absolute;
+    left: 75%;
+    top: 66%;
+    height: 90px;
+    width: 140px;
+    flex-wrap: nowrap;
+    display: flex;
+    border-radius: 25px;
+    background-color: rgb(255, 1, 170);
+    margin-right: 10px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#DungeonContainer{
+    width: 600px;
+    height: 100%;
+    background-color: rgb(7, 71, 27);
+    position: absolute;
+    left: 600px;
+    position: absolute;
+    z-index: 10;
+}
+#backButton{
+    position: absolute;
+    left: 3%;
+    top: 1%;
+    color: rgb(255, 208, 0);
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    background-color: black;
+}
+#DungeonsContainer{
+    position: absolute;
+    bottom: 1%;
+    left: 3%;
+    width: 94%;
+    height: 50%;
+    background-color: rgb(151, 102, 11);
+    overflow-y: scroll;
+}
+.DungeonCall{
+    position: relative;
+    float: left;
+    width: 98%;
+    height: 100px;
+    margin-left: 1%;
+    margin-top: 1%;
+    
+    background-color: rgb(223, 146, 58);
+}
+.DungeonCall p{
+    float: left;
+    margin-right: 15px;
+    font-size: 30px;
+}
+#DungeonView{
+    position: absolute;
+    left: 3%;
+    top: 8%;
+    height: 40%;
+    width: 94%;
+    background-color: rgb(92, 92, 92);
+    font-size: 50px;
+}
+#SkillPoints{
+    position: absolute;
+    left: 77.5%;
+    top: 59%;
+    height: 70px;
+    width: 110px;
+    flex-wrap: nowrap;
+    display: flex;
+    
+    background-color: rgb(255, 73, 194);
+    margin-right: 10px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+.TasksDisplay {
+    width: 500px;
+    height: 530px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    background-color: rgb(128, 128, 128);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    margin: 0 auto; /* center inside container */
+    position: absolute;
+}
+
+.Tasks {
+    width: 450px;
+    height: 150px;
+    margin-top: 20px;
+    flex-shrink: 0;
+    background-color: rgb(44, 44, 44); /* so you can see each task */
+}
+.NextTaskButton{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    position: absolute;
+}
 </style>
 </head>
-<div id="container">
+<!--<div id="container">
     <button id="Game_begin" onclick="Begin_Game()">Go</button>
+</div>-->
+<div id="TrainContainer">
+    <div id="EnergyBar">
+        <div id="EnergyFillMissing" style="width: 60%;"></div>
+        <div id="EnergyFill" style="width: 60%;"></div>
+    </div>
+    
+    <div id="StatNameContainer"></div>
+    <div id="StatContainer"></div>
+    <button id="Dungeon" onclick="DungeonOpen()">Dungeon</button>
+    <button id="Rest">Rest</button>
+    <button id="Items">Items</button>
+    <button id="Shop">Shop</button>
+    <div id="SkillPoints">Points: 0</div>
+    <button id="Skills">Skills</button>
+    
+    <div id="Turn"></div>
+
 </div>
+
 <body>
 
 <script>
+
+function Initialise(){
+    stats = [60,60,60,60]
+    statNames = ['Str','Spd','Cap','Int']
+    statGains = [5,5,5,5]
+    document.getElementById("Turn").innerHTML = 'Turn 1'
+    
+    Training()
+    assignTrainingAndRest()
+}
 function Begin_Game(){
-    container = document.getElementById("container")
+    /*container = document.getElementById("container")
     gamedisplay = document.createElement("div")
     gamedisplay.id = 'gamedisplay'
     container.appendChild(gamedisplay)
     randomSeed = []
     for(let i = 0;i<10;i++){
         randomSeed.push(Math.floor(Math.random()*2))
-    }
+    }*/
     
-    distances = [400,800,1200]
-    distance = distances[Math.floor(Math.random()*distances.length)]
-    gamedisplay.innerHTML = distance
-    placeholderRacer = [3,3,3,3]
+    //distances = [400,800,1200]
+    //distance = distances[Math.floor(Math.random()*distances.length)]
+    //gamedisplay.innerHTML = distance
+    //placeholderRacer = [3,3,3,3]
+    Initialise()
 }
+function assignTrainingAndRest(){
+    EnergyFillMissing = document.getElementById("EnergyFillMissing")
+    EnergyFillMissing.value =  parseInt(Math.random()*10)
+    EnergyFill = document.getElementById("EnergyFill")
+    EnergyFill.value = parseInt(Math.random()*20)
+    statNodes = document.getElementsByClassName("statNode")
+    for(let i = 0;i<statNodes.length;i++){
+        statNodes[i].value = parseInt(Math.random() * 5)
+    }
+    TurnCount = document.getElementById("Turn")
+    TurnCount.innerHTML = 'Turn ' + (parseInt(TurnCount.innerHTML.split(" ")[1])+1)
+}
+function Training(){
+    TrainContainer = document.getElementById("TrainContainer")
+    StatContainer = document.getElementById("StatContainer")
+    while(StatContainer.children.length > 0){
+        StatContainer.removeChild(StatContainer.lastChild);
+    }
+    while(StatNameContainer.children.length > 0){
+        StatNameContainer.removeChild(StatNameContainer.lastChild);
+    }
+
+    for(let i = 0; i < stats.length; i++){
+        statNode = document.createElement("button")
+        statNode.className = 'statNode'
+        statNode.innerHTML = String(stats[i])
+        //statNode.value = statGains[i]
+        statNode.dataset.index = i
+        statNode.style.position = 'relative'
+
+        statNode.onmouseover = function() {
+            const tooltipId = 'trainValueNode_' + this.dataset.index
+            if(document.getElementById(tooltipId)){
+                document.getElementById(tooltipId).remove()
+            }
+            const rect = this.getBoundingClientRect()
+            const containerRect = StatContainer.getBoundingClientRect()
+
+            trainValueNode = document.createElement("div")
+            trainValueNode.id = tooltipId
+            trainValueNode.innerHTML = '+' + this.value
+            trainValueNode.style.cssText = `
+                position: absolute;
+                left: ${rect.left - containerRect.left + rect.width / 2}px;
+                top: ${rect.top - containerRect.top - rect.height * 0.7}px;
+                transform: translateX(-50%);
+                background: rgba(225,70,0,0.8);
+                color: white;
+                padding: 3px 7px;
+                border-radius: 30px;
+                font-size: 30px;
+                white-space: nowrap;
+                pointer-events: none;
+                width: 60px;
+                height: 65px;
+          
+                text-align: center;
+                z-index: 1;
+            `
+            EnergyFill = document.getElementById("EnergyFill")
+            
+            EnergyFillMissing = document.getElementById("EnergyFillMissing")
+            EnergyFill.style.width = (parseInt(EnergyFill.style.width) - EnergyFillMissing.value-this.value)+'%'
+            
+            StatContainer.appendChild(trainValueNode)
+        }
+
+        statNode.onmouseleave = function() {
+            const tooltipId = 'trainValueNode_' + this.dataset.index
+            if(document.getElementById(tooltipId)){
+                document.getElementById(tooltipId).remove()
+            }
+            EnergyFill = document.getElementById("EnergyFill")
+            EnergyFillMissing = document.getElementById("EnergyFillMissing")
+            EnergyFill.style.width = EnergyFillMissing.style.width
+        }
+
+        statNode.onclick = function() {
+            stat = parseInt(this.innerHTML)
+            EnergyFillMissing = document.getElementById("EnergyFillMissing")
+            EnergyFill = document.getElementById("EnergyFill")
+            if(parseInt(EnergyFill.style.width) > parseInt(EnergyFillMissing.value)){
+                stat += parseInt(this.value)
+                this.innerHTML = String(stat)
+                EnergyFill = document.getElementById("EnergyFill")
+                EnergyFillMissing = document.getElementById("EnergyFillMissing")
+                EnergyFillMissing.style.width = EnergyFill.style.width
+                assignTrainingAndRest()
+                
+                this.onmouseleave()
+                this.onmouseover()
+
+            }
+            
+            
+            
+        }
+
+        StatContainer.appendChild(statNode)
+        statNameNode = document.createElement("div")
+        statNameNode.className = 'statNameNode'
+        statNameNode.innerHTML = String(statNames[i])
+        StatNameContainer.appendChild(statNameNode)
+    }
+    Rest = document.getElementById("Rest")
+    Rest.onclick = function Rest(){
+        EnergyFill = document.getElementById("EnergyFill")
+        EnergyFillMissing = document.getElementById("EnergyFillMissing")
+        EnergyFillMissing.style.width = EnergyFill.style.width
+        assignTrainingAndRest()
+        this.onmouseleave()
+        this.onmouseover()
+        
+        
+    }
+    Rest.onmouseover = function RestHover(){
+        EnergyFill = document.getElementById("EnergyFill")
+        EnergyFill.style.width = (parseInt(EnergyFill.style.width) + parseInt(EnergyFill.value))+'%'
+        EnergyFillMissing = document.getElementById("EnergyFillMissing")
+        EnergyFillMissing.style.zIndex = 1
+        EnergyFill.style.zIndex = 0
+
+    }
+    Rest.onmouseleave = function RestLeave(){
+        EnergyFill = document.getElementById("EnergyFill")
+        EnergyFillMissing = document.getElementById("EnergyFillMissing")
+        EnergyFill.style.width = EnergyFillMissing.style.width
+        EnergyFillMissing.style.zIndex = 0
+        EnergyFill.style.zIndex = 1
+    }
+}
+function DungeonOpen(){
+    PossibleDungeons = ['Deep Cavern','Skeleton Tomb','Spider Nest']
+    PossibleResources = ['Bread','Coal','Gold']
+    if(document.getElementById("DungeonContainer")){
+        document.getElementById("DungeonContainer").remove()
+    }
+    DungeonContainer = document.createElement("div")
+    DungeonContainer.id = 'DungeonContainer'
+    backButton = document.createElement('button')
+    backButton.id = 'backButton'
+    backButton.innerHTML = '<- Back'
+    backButton.onclick = function backFunc(){
+        this.parentNode.remove()
+    }
+    DungeonContainer.appendChild(backButton)
+    DungeonsContainer = document.createElement("div")
+    DungeonsContainer.id = 'DungeonsContainer'
+    
+    DungeonContainer.appendChild(DungeonsContainer)
+    DungeonView = document.createElement("div")
+    DungeonView.id = 'DungeonView'
+    DungeonContainer.appendChild(DungeonView)
+    currentclicked = ''
+    for(let i = 0;i<5;i++){
+        DungeonCall = document.createElement("div")
+        DungeonCall.className = 'DungeonCall'
+
+        DungeonCallName = document.createElement("p")
+        DungeonCallName.innerHTML = PossibleDungeons[Math.floor(Math.random() * PossibleDungeons.length)]
+        DungeonCallResources = document.createElement("p")
+        DungeonCallResources.innerHTML = PossibleResources[Math.floor(Math.random() * PossibleResources.length)]
+        DungeonCallDanger = document.createElement("p")
+        DungeonCallDanger.innerHTML = Math.floor(Math.random()*3)+1
+        DungeonCall.appendChild(DungeonCallName)
+        DungeonCall.appendChild(DungeonCallResources)
+        DungeonCall.appendChild(DungeonCallDanger)
+
+        DungeonCall.onclick = function DungeonCallCheck() {
+            if (currentclicked != '') {
+                // Reset the previously selected card
+                currentclicked.style.backgroundColor = '';
+                currentclicked.onclick = arguments.callee; // restore DungeonCallCheck
+            }
+
+            DungeonView = document.getElementById('DungeonView');
+            DungeonView.innerHTML = this.children[0].innerHTML + ',' + this.children[1].innerHTML + ',' + this.children[2].innerHTML;
+            this.style.backgroundColor = 'blue';
+
+            currentclicked = this;
+
+            this.onclick = function DungeonDoubleClick() {
+                backButton.onclick();
+                DungeonViewContainer = document.createElement("div")
+                DungeonViewContainer.id = "container"
+                document.body.appendChild(DungeonViewContainer)
+                TasksDisplay = document.createElement("div")
+                TasksDisplay.className = "TasksDisplay"
+                NextTaskButton = document.createElement("button")
+                NextTaskButton.className = 'NextTaskButton'
+                NextTaskButton.innerHTML = 'Next'
+                NextTaskButton.onclick = function NextTaskButtonClick(){
+                    if(TasksDisplay.children.length < 3){
+                        Task = document.createElement("div")
+                        Task.className = 'Tasks'
+                        TasksDisplay.appendChild(Task)
+                    }if(TasksDisplay.children.length == 1){
+                        Task.style.backgroundColor = "rgb(105, 80, 43)"
+                    }if(TasksDisplay.children.length == 2){
+                        Task.style.backgroundColor = "rgb(70,100,130)"
+                    }if(TasksDisplay.children.length == 3){
+                        Task.style.backgroundColor = "rgb(42,42,42)"
+                    }
+                    
+                }
+                DungeonViewContainer.appendChild(NextTaskButton)
+                DungeonViewContainer.appendChild(TasksDisplay)
+            };
+        }
+        DungeonsContainer.appendChild(DungeonCall)
+    }
+    document.body.appendChild(DungeonContainer)
+}
+Begin_Game()
 
 </script>
 
